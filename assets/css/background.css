@@ -1,0 +1,22 @@
+.background__top {
+	width: 100%;
+	background-image: url('../img/splash-verde.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 295px;
+	left: -0.5px;
+	top: 0px;
+	z-index: -1;
+}
+
+.background__lateral {
+	background-image: url('../img/splash-verde-lateral.png');
+	background-repeat: no-repeat;
+
+	position: absolute;
+	width: 84.03px;
+	height: 415px;
+	right: -3.5%;
+	top: 199px;
+	z-index: -1;
+}
