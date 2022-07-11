@@ -1,0 +1,48 @@
+.sessao-principal {
+	display: flex;
+	flex-direction: column;
+
+	width: 60%;
+	margin: 30% auto 0%;
+	gap: 1rem;
+
+
+	text-align: center;
+	align-items: center;
+
+
+}
+
+
+.sessao__titulo {
+	font-family: 'IBM Plex Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.625rem;
+	line-height: 3rem;
+}
+
+.sessao__paragrafo {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+
+}
+
+.sessao__botao {
+	width: 180px;
+	padding: 10px;
+
+
+	background-color: var(--coral);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+
+
+	color: var(--branco);
+	text-decoration: none;
+
+	border-radius: 5px;
+	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+}

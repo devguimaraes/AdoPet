@@ -1,0 +1,20 @@
+.footer {
+	width: 101%;
+	height: 104px;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+	background-color: var(--verde-claro);
+	color: var(--branco);
+
+}
+
+.footer__paragrafo {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
