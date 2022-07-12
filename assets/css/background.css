@@ -16,7 +16,7 @@
 	position: absolute;
 	width: 5.252rem;
 	height: 25.938rem;
-	right: -3.1%;
+	right: 0;
 	top: 11rem;
 	z-index: -1;
 }
@@ -24,10 +24,34 @@
 .background-dog {
 	background-image: url('../img/Ilustração-home-mobile.png');
 	background-repeat: no-repeat;
+	margin: 1rem auto 0px auto;
 
 	width: 247.34px;
 	height: 312.77px;
 	left: 33.66px;
 	top: 518px;
 	z-index: -1;
+}
+
+
+@media (min-width:768px) {
+	.background__top {
+		background-image: url('../img/splash-verde-768.png');
+		position: absolute;
+		width: 560.97px;
+		height: 470px;
+		left: -1.17px;
+		top: -1px;
+	}
+
+	.background__lateral {
+		background-image: url('../img/splash-verde-lateral-768.png');
+		background-repeat: no-repeat;
+
+		position: absolute;
+		width: 134.45px;
+		height: 664px;
+	}
+
+
 }

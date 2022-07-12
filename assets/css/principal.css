@@ -3,14 +3,12 @@
 	flex-direction: column;
 
 	width: 60%;
-	margin: 30% auto 0%;
+	margin: 60px auto 0px auto;
 	gap: 1rem;
 
 
 	text-align: center;
 	align-items: center;
-
-
 }
 
 
@@ -25,13 +23,13 @@
 .sessao__paragrafo {
 	font-style: normal;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 1rem;
 
 }
 
 .sessao__botao {
-	width: 180px;
-	padding: 10px;
+	width: 11.25rem;
+	padding: 0.625rem;
 
 
 	background-color: var(--coral);
@@ -45,4 +43,31 @@
 
 	border-radius: 5px;
 	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+@media (min-width: 768px) {
+	.sessao-principal {
+		margin-top: 160px;
+		gap: 3rem;
+	}
+
+	.sessao__paragrafo {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	.sessao__botao {
+		width: 344px;
+		padding: 12px;
+
+	}
+}
+
+
+@media (min-width:1440px) {
+	.sessao-principal {
+		margin-top: -100px;
+	}
 }
