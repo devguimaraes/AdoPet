@@ -1,4 +1,5 @@
 .background__top {
+	box-sizing: border-box;
 	width: 22.007rem;
 	background-image: url('../img/splash-verde.png');
 	background-repeat: no-repeat;
@@ -10,6 +11,7 @@
 }
 
 .background__lateral {
+	box-sizing: border-box;
 	background-image: url('../img/splash-verde-lateral.png');
 	background-repeat: no-repeat;
 
@@ -22,16 +24,17 @@
 }
 
 .background-dog {
+	box-sizing: border-box;
 	background-image: url('../img/Ilustração-home-mobile.png');
 	background-repeat: no-repeat;
 	margin: 1rem auto 0px auto;
 
 	width: 247.34px;
 	height: 312.77px;
-	left: 33.66px;
-	top: 518px;
+
 	z-index: -1;
 }
+
 
 
 @media (min-width:768px) {
@@ -45,6 +48,7 @@
 	}
 
 	.background__lateral {
+		box-sizing: border-box;
 		background-image: url('../img/splash-verde-lateral-768.png');
 		background-repeat: no-repeat;
 

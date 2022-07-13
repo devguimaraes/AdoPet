@@ -1,0 +1,12 @@
+@import url('./backgroundCadastro.css');
+@import url('./principalCadastro.css');
+@import url('./footer.css');
+
+body {
+	background-color: var(--branco);
+	color: var(--background-azul);
+}
+
+.cabecalho--cadastro {
+	height: 24vh;
+}

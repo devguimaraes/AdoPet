@@ -1,0 +1,76 @@
+.sessao-principal--cadastro {
+	box-sizing: border-box;
+
+
+	width: 100vw;
+
+	gap: 1rem;
+	margin: 0 auto 10rem auto;
+
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+	align-items: center;
+	text-align: center;
+}
+
+.sessao-principal__formulario {
+	width: 100%;
+}
+
+.formulario__cadastro {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.formulario__titulo {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 24px;
+
+	color: var(--cinza);
+	padding: 1rem;
+}
+
+.formulario__input {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	/* or 133% */
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: #BCBCBC;
+	background: #F7F7F7;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+
+	border: 1px solid white;
+	border-radius: 6px;
+	width: 100%;
+	height: 40px;
+}
+
+.formulario__input--senha::placeholder {
+	background-image: url('../../img/mask-input.svg');
+	background-repeat: no-repeat;
+	background-position: 95%;
+
+
+}
+
+.sessao__botao--cadastro {
+	border: 1px solid white;
+	margin-top: 2.5rem;
+}
+
+
+@media (min-width:768px) {
+	.sessao-principal--cadastro {
+		width: 60%;
+	}
+}

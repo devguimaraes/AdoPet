@@ -16,7 +16,9 @@
 
 
 body {
+	box-sizing: border-box;
 	width: 100vw;
+	min-height: 100vh;
 
 	font-family: 'Poppins', sans-serif;
 	color: var(--branco);

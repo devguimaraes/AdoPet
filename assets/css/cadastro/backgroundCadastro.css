@@ -1,0 +1,50 @@
+/* Tela Cadastro */
+.background__patas {
+	box-sizing: border-box;
+	background-image: url('../../img/Patas.svg');
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 115.96px;
+	height: 243.41px;
+	right: 0px;
+	top: 0px;
+	z-index: -1;
+}
+
+.background__lateral {
+	display: none;
+}
+
+
+.background__lateral--branco {
+	background-image: url('../../img/splash-branco-lateral.svg');
+	background-repeat: no-repeat;
+
+	position: absolute;
+	width: 82.73px;
+	height: 415px;
+	left: 1px;
+	top: 368px;
+	z-index: -1;
+}
+
+@media (min-width:768px) {
+	.background__lateral--branco {
+		display: none;
+	}
+
+	.background__lateral {
+		display: block;
+	}
+
+	.background__patas {
+		background-image: url('../../img/Patas-768.svg');
+
+		width: 200px;
+		height: 374.15px;
+		top: 0px;
+		right: 0px;
+
+	}
+
+}
