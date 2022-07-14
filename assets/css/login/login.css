@@ -11,3 +11,10 @@
 .sessao-principal--login {
 	margin-bottom: 15rem;
 }
+
+@media (min-height: 1300px) {
+	.sessao-principal--login {
+		margin-bottom: 29rem;
+	}
+
+}

@@ -18,3 +18,12 @@
 	font-size: 1rem;
 	line-height: 1.5rem;
 }
+
+
+@media (min-width:1920px) {
+
+	.footer,
+	.footer--cadastro {
+		height: 190px;
+	}
+}

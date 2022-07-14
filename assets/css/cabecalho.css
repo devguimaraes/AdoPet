@@ -33,3 +33,9 @@
 		height: 26vh;
 	}
 }
+
+@media (min-width:1920px) {
+	.cabecalho__lista {
+		width: 20%;
+	}
+}
