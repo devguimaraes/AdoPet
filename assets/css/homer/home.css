@@ -1,0 +1,142 @@
+.cabecalho {
+	height: 16vh;
+}
+
+.cabecalho__lista {
+	width: 30%;
+}
+
+
+.perfil__usuario {
+	background-image: url('../../img/user.svg');
+	background-repeat: no-repeat;
+
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 292px;
+	top: 22px;
+}
+
+.background__lateral {
+	display: none;
+}
+
+
+.container-home {
+	box-sizing: border-box;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.cartao-home {
+	display: flex;
+	gap: 1rem;
+
+	margin-bottom: 2.5rem;
+}
+
+.cartao__img {
+	text-align: center;
+
+}
+
+.cartao__info {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.cartao__titulo {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+
+	color: var(--background-azul);
+}
+
+.cartao__item {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+
+	color: var(--cinza);
+}
+
+.cartao__localidade {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+
+	color: var(--cinza);
+}
+
+.cartao__atendimento {
+	background-image: url('../../img/ícone\ mensagem.svg');
+	background-repeat: no-repeat;
+
+	width: 9rem;
+	height: 20px;
+	text-align: -webkit-right;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 16px;
+	color: var(--cinza);
+}
+
+
+.home__paragrafo {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+
+	text-align: center;
+	padding: 2rem 4rem;
+
+	color: var(--background-azul);
+}
+
+
+@media (min-width:768px) {
+	.perfil__usuario {
+		width: 48px;
+		height: 48px;
+		left: 90%;
+		top: 22px;
+
+	}
+
+	.home__paragrafo {
+		padding: 4rem 2rem;
+	}
+
+	.container-home {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+}
+
+
+@media (min-width: 1440px) {
+
+	.container-home {
+		width: 80%;
+		margin-bottom: 2.5rem;
+	}
+
+	.background__lateral {
+		display: block;
+	}
+}

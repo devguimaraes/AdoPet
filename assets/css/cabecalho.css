@@ -19,6 +19,10 @@
 
 
 @media (min-width:768px) {
+	.cabecalho__lista {
+		width: 30%;
+	}
+
 	.cabecalho__logo {
 		display: block;
 	}
@@ -28,12 +32,4 @@
 	.cabecalho {
 		height: 26vh;
 	}
-}
-
-
-@media (min-width:1920px) {
-	.cabecalho__lista {
-		width: 30%;
-	}
-
 }
