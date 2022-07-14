@@ -1,0 +1,94 @@
+.paragrafo__mensagem {
+	margin-top: 1.5rem;
+}
+
+.container__mensagem {
+	display: flex;
+	flex-direction: column;
+}
+
+.container__formulario {
+	display: flex;
+	margin: 0 3rem 3rem 3rem;
+}
+
+.input__mensagem,
+.textarea__mensagem {
+	width: 280px;
+	height: 48px;
+	background: #FFFFFF;
+	mix-blend-mode: normal;
+	border: 1px solid white;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 6px;
+	margin: 0.5rem 0px;
+}
+
+.textarea__mensagem {
+	width: 280px;
+	height: 172px;
+	font-family: Poppins;
+}
+
+.input__mensagem::placeholder {
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.formulario__titulo--mensagem {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.sessao__botao--mensagem {
+	display: block;
+}
+
+/* 768 px */
+@media (min-width:768px) {
+	.container__mensagem {
+		width: 70%;
+		margin: 0 auto;
+
+	}
+
+	.cabecalho--mensagem {
+		height: 20vh;
+	}
+
+	.background__lateral {
+		display: block;
+	}
+}
+
+
+/* 1440px */
+
+@media (min-width:1440px) {
+	.paragrafo__mensagem {
+		margin-left: 1.5rem;
+	}
+
+	.formulario__mensagem {
+		margin: 0 auto;
+	}
+
+	.input__mensagem {
+		width: 492px;
+	}
+
+	.textarea__mensagem {
+		width: 492px;
+	}
+}
+
+@media (min-height: 1300px) {
+	.container__mensagem {
+		margin-bottom: 6rem;
+	}
+}

@@ -1,0 +1,21 @@
+.perfil__usuario--novoUsario {
+	background-image: url('../../img/avatar-usario-pequeno.svg');
+	background-repeat: no-repeat;
+}
+
+.formulario__titulo--perfil {
+	margin: 0 auto;
+}
+
+.container__avatar {
+	text-align: center;
+}
+
+.avatar__paragrafo {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 24px;
+
+	color: var(--coral);
+}

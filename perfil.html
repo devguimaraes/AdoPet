@@ -11,42 +11,75 @@
 	<link rel="stylesheet" href="./assets/css/reset.css">
 	<link rel="stylesheet" href="./assets/css/index.css">
 	<link rel="stylesheet" href="./assets/css/cadastro/cadastro.css">
-	<!-- CSS PÁGINA -->
 	<link rel="stylesheet" href="./assets/css/homer/home.css">
-
+	<link rel="stylesheet" href="./assets/css/mensagem/mensagem.css">
+	<!-- CSS PÁGINA -->
+	<link rel="stylesheet" href="./assets/css/perfil/perfil.css">
 </head>
 
 <body>
-
-
-
-	<header class="cabecalho">
+	<header class="cabecalho cabecalho--mensagem">
 		<div class="background__top"></div>
 		<ul class="cabecalho__lista">
-			<li class="cabecalho__item cabecalho__logo"><img src="./assets/img/Logo-768.png" alt="">
+			<li class="cabecalho__item cabecalho__logo"><a href="index.html" class="cabecalho__link"><img
+						src="./assets/img/Logo-768.png" alt=""></a>
 			</li>
 			<li class="cabecalho__item"><a href="index.html" class="cabecalho__link"><img src="./assets/img/icon-home.svg"
 						alt="" srcset=""></a>
 			</li>
-			<li class="cabecalho__item"><a href="#" class="cabecalho__link"><img src="./assets/img/icon-mail.svg" alt=""
-						srcset=""></a>
+			<li class="cabecalho__item"><a href="mensagem.html" class="cabecalho__link"><img src="./assets/img/icon-mail.svg"
+						alt="" srcset=""></a>
 			</li>
 		</ul>
-		<div class="perfil__usuario"></div>
+		<a href="perfil.html" class="cabecalho__link">
+			<div class="perfil__usuario perfil__usuario--novoUsario"></div>
+		</a>
 	</header>
+	<div class="background__lateral"></div>
 
 	<main>
+		<section class="container__mensagem">
+			<p class="home__paragrafo paragrafo__mensagem">Esse é o perfil que aparece para responsáveis ou ONGs que recebem
+				sua mensagem.</p>
+			<h2 class="formulario__titulo formulario__titulo--perfil">Perfil</h2>
+			<div class="container__formulario">
+				<form action="" class="formulario__mensagem">
+					<label for="foto">
+						<legend class="formulario__titulo--mensagem">Foto</legend>
+					</label>
+					<div class="container__avatar" name="foto">
+						<img src="./assets/img/avatar-usario-medio.svg" alt="Avatar de usuário">
+						<p class="avatar__paragrafo">Clique na foto para editar</p>
+					</div>
+					<label for="nome">
+						<legend class="formulario__titulo--mensagem">Nome</legend>
+					</label>
+					<input type="text" id="nome" name="nome" class="input__mensagem" placeholder="Joana Magalhães" required>
 
-
+					<label for="telefone">
+						<legend class="formulario__titulo--mensagem">Telefone</legend>
+					</label>
+					<input type="tel" id="telefone" name="telefone" class="input__mensagem" placeholder="55 11 XXXXXXXXX"
+						pattern="[0-9]{2}[0-9]{4}[0-9]{5}" required>
+					<label for="cidade">
+						<legend class="formulario__titulo--mensagem">Cidade</legend>
+					</label>
+					<input type="text" id="cidade" name="cidade" class="input__mensagem" placeholder="São Paulo" required>
+					<label for="mensagem">
+						<legend class="formulario__titulo--mensagem">Sobre</legend>
+					</label>
+					<textarea name="mensagem" id="mensagem" class="textarea__mensagem" placeholder="Escreva sua Mensagem"
+						required></textarea>
+					<input type="submit" class="sessao__botao sessao__botao--cadastro sessao__botao--mensagem" value="SALVAR">
+				</form>
+			</div>
+		</section>
 
 	</main>
 
-
 	<footer class="footer--cadastro">
 		<p class="footer__paragrago">2022 - Desenvolvido por Alura.</p>
-
 	</footer>
-
 </body>
 
 </html>
