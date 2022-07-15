@@ -91,9 +91,10 @@ As seguintes tecnlogias foram usadas na construção do projeto:
 <br>
 <br>
 
-## Tarefas
+## Tarefas Pendentes
 
-[ ] Validacão dos formulários
+- [ ] Validacão dos formulários
+- [ ] Tags de SEO
 
 <span id='responsivo'>
 
@@ -101,12 +102,14 @@ As seguintes tecnlogias foram usadas na construção do projeto:
 
 </span>
  O projeto foi desenvolvido para se adaptar a diferentes tipos de tela.
-
+<br>
+<br>
+<br>
 <br>
 <p align='center'><img src="./assets/template/mobile.png"></p>
 <br>
 <br>
-<p align='center'><img src="./assets/template/tablet.png"></p>
+<p align='center'><img src="./assets/template/Tablet.png"></p>
 <br>
 <br>
 <p align='center' ><img src="./assets/template/desktop.png"></p>
