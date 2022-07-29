@@ -18,3 +18,17 @@
 	}
 
 }
+
+
+.error {
+	display: none;
+}
+
+.error--active {
+	margin-top: 1rem;
+	padding: 0.5rem;
+	border-radius: 5px;
+	display: block;
+	background-color: brown;
+	color: var(--branco);
+}
