@@ -10,3 +10,8 @@ body {
 .cabecalho--cadastro {
 	height: 24vh;
 }
+
+.erroAtivo {
+	display: block;
+	margin: 0.5rem;
+}
