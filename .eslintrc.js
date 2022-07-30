@@ -14,7 +14,6 @@ module.exports = {
 		sourceType: 'module',
 	},
 	rules: {
-		no-undef: "error",
 		'no-restricted-globals': ['error', 'event', 'fdescribe'],
 		'no-console': 'off',
 		'prettier/prettier': 'error',
