@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const verificaSenha = () => {
 	const senhaNova = document.querySelector('#senha');
 	const confirmarSenha = document.querySelector('#senhaConfirm');
@@ -9,7 +10,8 @@ const verificaSenha = () => {
 	} else {
 		// TODO recomecar aqui, fazar arquivo que ficará no local Storage com os dados passados no formularios
 
-		console.log('Cadastro realizado com sucesso');
+		alert('Cadastro realizado com sucesso');
 	}
 };
+
 export default verificaSenha;
