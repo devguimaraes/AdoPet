@@ -14,9 +14,11 @@ const verificaSenha = () => {
 	}
 	erroVazio.classList.remove('erroAtivo');
 	erroVazio.innerHTML = '';
-	// TODO recomecar aqui, fazar arquivo que ficará no local Storage com os dados passados no formularios
+	// Autenticacao dos inputs e senha feita antes de chamar funcao salvaDados
 	salvarDados();
+	// eslint-disable-next-line no-alert
 	alert('Cadastro Realizado com sucesso');
+	window.location.replace('../../home.html');
 };
 
 export default verificaSenha;

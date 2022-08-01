@@ -8,18 +8,10 @@ const informaErro = (element) => {
 const verifica = (elemento) => {
 	if (elemento.validity.valueMissing) {
 		informaErro('O campo e-mail precisa ser preenchido');
-		// TODO remover timeout e fazer limpeza dos input
-		setTimeout(() => {
-			location.reload();
-		}, 1000);
 	}
 
 	if (elemento.validity.patternMismatch) {
 		informaErro('Por favor preencher com e-mail válido');
-
-		setTimeout(() => {
-			location.reload();
-		}, 5000);
 	}
 };
 

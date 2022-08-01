@@ -1,6 +1,9 @@
+/* eslint-disable no-undef */
 // eslint-disable-next-line no-undef
 const formulario = document.querySelector('#formulario-cadastro');
-const updateDataLocalStorage = [];
+const updateDataLocalStorage = JSON.parse(
+	localStorage.getItem('DadosUsuario' || [])
+);
 
 const salvarDados = () => {
 	const { nome } = formulario;
@@ -9,7 +12,7 @@ const salvarDados = () => {
 
 	const cadastroUsuario = {
 		nome: nome.value.trim(),
-		email: email.value.trim(),
+		email: email.value.trim().toLowerCase(),
 		senha: senha.value.trim(),
 	};
 
@@ -17,5 +20,5 @@ const salvarDados = () => {
 	localStorage.setItem('DadosUsuario', JSON.stringify(updateDataLocalStorage));
 	console.log(updateDataLocalStorage);
 };
-// Autenticacao dos inputs e senha feita antes de chamar funcao salvaDados
+
 export default salvarDados;
