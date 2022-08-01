@@ -93,7 +93,6 @@ As seguintes tecnlogias foram usadas na construção do projeto:
 
 ## Tarefas Pendentes
 
-- [ ] Validacão dos formulários
 - [ ] Tags de SEO
 
 <span id='responsivo'>
