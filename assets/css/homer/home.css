@@ -79,6 +79,11 @@
 	color: var(--cinza);
 }
 
+.cartao__link {
+	text-decoration: none;
+	color: var(--cinza)
+}
+
 .cartao__atendimento {
 	background-image: url('../../img/ícone\ mensagem.svg');
 	background-repeat: no-repeat;
