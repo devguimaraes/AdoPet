@@ -1,8 +1,9 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable no-alert */
 /* eslint-disable no-undef */
-const getLocalStorage = JSON.parse(localStorage.getItem('DadosUsuario' || []));
-
+const getLocalStorage =
+	JSON.parse(localStorage.getItem('DadosUsuario' || [])) || [];
+console.log(getLocalStorage);
 const autenticaUsuario = (el) => {
 	let verificador = true;
 	const { email } = el.target.elements;
@@ -26,6 +27,11 @@ const autenticaUsuario = (el) => {
 				alert(`Usuário ou senha incorretos`);
 			}
 		}, 0);
+	}
+
+	if (getLocalStorage.length === 0) {
+		alert('Por favor faca seu cadastro');
+		window.location.replace('../../cadastro.html');
 	}
 };
 export default autenticaUsuario;

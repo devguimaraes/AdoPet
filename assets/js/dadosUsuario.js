@@ -1,9 +1,10 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-undef
 const formulario = document.querySelector('#formulario-cadastro');
-const updateDataLocalStorage = JSON.parse(
-	localStorage.getItem('DadosUsuario' || [])
-);
+const updateDataLocalStorage =
+	JSON.parse(localStorage.getItem('DadosUsuario' || [])) || [];
+
+console.log(updateDataLocalStorage);
 
 const salvarDados = () => {
 	const { nome } = formulario;
