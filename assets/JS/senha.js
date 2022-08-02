@@ -18,7 +18,7 @@ const verificaSenha = () => {
 	salvarDados();
 	// eslint-disable-next-line no-alert
 	alert('Cadastro Realizado com sucesso');
-	window.location.replace('../../home.html');
+	window.location.replace('../../index.html');
 };
 
 export default verificaSenha;
