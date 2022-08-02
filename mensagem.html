@@ -41,7 +41,7 @@
 			<p class="home__paragrafo paragrafo__mensagem">Envie uma mensagem para a pessoa ou instituição que está cuidado do
 				animal:</p>
 			<div class="container__formulario">
-				<form action="" class="formulario__mensagem">
+				<form action="" class="formulario__mensagem" data-formulario-mensagem>
 					<label for="nome">
 						<legend class="formulario__titulo--mensagem">Nome</legend>
 					</label>
@@ -50,7 +50,7 @@
 					<label for="telefone">
 						<legend class="formulario__titulo--mensagem">Telefone</legend>
 					</label>
-					<input type="tel" id="telefone" name="telefone" class="input__mensagem"
+					<input type="number" id="telefone" name="telefone" class="input__mensagem"
 						placeholder="Insira seu telefone e/ou whatsapp" pattern="[0-9]{2}[0-9]{4}[0-9]{5}" required>
 					<label for="animal">
 						<legend class="formulario__titulo--mensagem">Nome do Animal</legend>
@@ -74,6 +74,7 @@
 	<footer class="footer--cadastro">
 		<p class="footer__paragrago">2022 - Desenvolvido por Alura.</p>
 	</footer>
+	<script src="./assets/JS/mensagem.js" type="module"></script>
 </body>
 
 </html>
