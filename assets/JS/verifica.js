@@ -1,6 +1,6 @@
-// eslint-disable-next-line no-undef
-const error = document.querySelector('[data-error]');
+/* eslint-disable no-undef */
 const informaErro = (element) => {
+	const error = document.querySelector('[data-error]');
 	error.classList = 'error--active';
 	error.innerHTML = element;
 };
@@ -15,4 +15,16 @@ const verifica = (elemento) => {
 	}
 };
 
-export default verifica;
+const limparInput = (elemento) => {
+	const error = document.querySelector('[data-error]');
+	if (elemento.validity.valueMissing) {
+		error.classList.remove('error--active');
+		error.innerHTML = '';
+	}
+	if (elemento.validity.patternMismatch) {
+		error.classList.remove('error--active');
+		error.innerHTML = '';
+	}
+};
+
+export { verifica, limparInput };
