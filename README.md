@@ -13,7 +13,7 @@
 
 
 <h3 align="center">
-	🚧  Adopet 🚀 Em construção...  🚧
+	🚧  Adopet 🚀 Finalizado  🚧
 </h3>
 
 <br>
@@ -94,6 +94,17 @@ As seguintes tecnlogias foram usadas na construção do projeto:
 ## Tarefas Pendentes
 
 - [ ] Tags de SEO
+- [ ] Permitir a edição do usuário criado e a inserção de imagem.
+- [ ] Tela de animais: listagem dinâmica - API
+- [ ] Utilizar uma ferramenta SPA (Feito apenas com JS, CSS, HTML)
+
+## Tarefas Concluídas
+- [X] Tela de contato: validar dados
+- [X] Tela de login: validar e-mail
+- [X] Tela de cadastro: cadastro funcional
+- [X] Tela de cadastro: validar e-mail
+- [X] Responsividade
+
 
 <span id='responsivo'>
 
