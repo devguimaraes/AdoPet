@@ -139,3 +139,20 @@ As seguintes tecnlogias foram usadas na construção do projeto:
 <p align='center'>
 <a href="https://github.com/devguimaraes" align='center'><img style="border-radius: 60%; margin: 0" src="https://avatars.githubusercontent.com/devguimaraes" width="300px;" alt=""/><br><br><p align='center'><b>Bruno Guimaraães</b></p></a><br />
 </span>
+
+
+# Adopet
+
+AdoPet têm como objetivo fazer o intermédio entre adotantes de animais e ONGs que possuem foco de retirar animais da rua.
+
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **Titulo do meu projeto**
+| :label: Tecnologias | html, css, JavaScript (tecnologias utilizadas)
+| :rocket: URL         | ado-pet-pi.vercel.app/
+| :fire: Desafio     | 
+
+<!-- Inserir imagem com a #vitrinedev ao final do link -->
+![](https://via.placeholder.com/1200x500.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
+
+
