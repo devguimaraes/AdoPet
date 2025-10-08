@@ -2,52 +2,94 @@
 <html lang="pt-br">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
-	<link rel="stylesheet" href="./assets/css/reset.css">
-	<link rel="stylesheet" href="./assets/css/index.css">
-	<title>Adot-Pet</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AdoPet - Plataforma para adoção de animais. Conectamos adotantes com ONGs para facilitar a adoção responsável de pets.">
+  <meta name="keywords" content="adoção, pets, animais, cães, gatos, ONGs, adoção responsável">
+  <meta name="author" content="Bruno Guimarães">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adopet.com/">
+  <meta property="og:title" content="AdoPet - Adoção Responsável de Animais">
+  <meta property="og:description" content="Conectamos adotantes com ONGs para facilitar a adoção responsável de pets.">
+  <meta property="og:image" content="./assets/img/Logo-768.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://adopet.com/">
+  <meta property="twitter:title" content="AdoPet - Adoção Responsável de Animais">
+  <meta property="twitter:description" content="Conectamos adotantes com ONGs para facilitar a adoção responsável de pets.">
+  <meta property="twitter:image" content="./assets/img/Logo-768.png">
+
+  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize.css/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <title>AdoPet - Adoção Responsável de Animais</title>
 </head>
 
 <body>
-	<div class="background__top"></div>
+  <div class="background__top" aria-hidden="true"></div>
 
-	<header class="cabecalho">
-		<ul class="cabecalho__lista">
-			<li class="cabecalho__item cabecalho__logo"><a href="index.html" class="cabecalho__link"><img
-						src="./assets/img/Logo-768.png" alt=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="index.html" class="cabecalho__link"><img src="./assets/img/icon-home.svg"
-						alt="" srcset=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="mensagem.html" class="cabecalho__link"><img src="./assets/img/icon-mail.svg"
-						alt="" srcset=""></a>
-			</li>
-		</ul>
-	</header>
+  <header class="cabecalho" role="banner">
+    <nav class="cabecalho__nav" role="navigation" aria-label="Navegação principal">
+      <ul class="cabecalho__lista">
+        <li class="cabecalho__item cabecalho__logo">
+          <a href="index.html" class="cabecalho__link" aria-label="AdoPet - Página inicial">
+            <img src="./assets/img/Logo-768.png" alt="Logo AdoPet" width="168" height="44">
+          </a>
+        </li>
+        <li class="cabecalho__item">
+          <a href="index.html" class="cabecalho__link" aria-label="Página inicial">
+            <img src="./assets/img/icon-home.svg" alt="Ícone casa" width="24" height="24">
+          </a>
+        </li>
+        <li class="cabecalho__item">
+          <a href="mensagem.html" class="cabecalho__link" aria-label="Mensagens">
+            <img src="./assets/img/icon-mail.svg" alt="Ícone mensagem" width="24" height="24">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-	<div class="background__lateral"></div>
+  <div class="background__lateral" aria-hidden="true"></div>
 
-	<section class="sessao-principal">
-		<div class="container-img">
-			<img src="./assets/img/logo-branca-mobile.svg" alt="">
-		</div>
+  <main class="sessao-principal" role="main">
+    <div class="container-img">
+      <img src="./assets/img/logo-branca-mobile.svg" alt="Logo AdoPet em branco" width="187" height="122">
+    </div>
 
-		<h2 class="sessao__titulo">Boas-vindas!</h2>
-		<p class="sessao__paragrafo">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+    <h1 class="sessao__titulo">Boas-vindas!</h1>
+    <p class="sessao__paragrafo">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
 
-		<a href="login.html" type="submit" class="sessao__botao">Já tenho conta</a>
-		<a href="cadastro.html" type="submit" class="sessao__botao">Quero me cadastrar</a>
-	</section>
+    <div class="sessao__botoes">
+      <a href="login.html" class="sessao__botao sessao__botao--primario" role="button" aria-label="Fazer login na conta existente">
+        Já tenho conta
+      </a>
+      <a href="cadastro.html" class="sessao__botao sessao__botao--secundario" role="button" aria-label="Criar nova conta">
+        Quero me cadastrar
+      </a>
+    </div>
+  </main>
 
-	<div class="background-dog"></div>
-	<footer class="footer">
-		<p class="footer__paragrago">2022 - Desenvolvido por <a class="footer__paragrago cabecalho__link"
-				href="https://github.com/devguimaraes" target="_blank"> Bruno
-				Guimarães</a></p>
-	</footer>
+  <div class="background-dog" aria-hidden="true"></div>
+  
+  <footer class="footer" role="contentinfo">
+    <p class="footer__paragrafo">
+      © 2024 - Desenvolvido por 
+      <a class="footer__link" href="https://github.com/devguimaraes" target="_blank" rel="noopener noreferrer" aria-label="Perfil do desenvolvedor Bruno Guimarães no GitHub (abre em nova aba)">
+        Bruno Guimarães
+      </a>
+    </p>
+  </footer>
+  <!-- Scripts otimizados -->
+  <script type="module" src="./assets/js/performance.js"></script>
+  <script type="module" src="./assets/js/inputs.js"></script>
 </body>
 
 </html>

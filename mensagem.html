@@ -2,79 +2,159 @@
 <html lang="pt-br">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Adot-Pet</title>
-	<link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
-	<!-- CSS -->
-	<link rel="stylesheet" href="./assets/css/reset.css">
-	<link rel="stylesheet" href="./assets/css/index.css">
-	<link rel="stylesheet" href="./assets/css/cadastro/cadastro.css">
-	<link rel="stylesheet" href="./assets/css/homer/home.css">
-	<!-- CSS página -->
-	<link rel="stylesheet" href="./assets/css/mensagem/mensagem.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Envie uma mensagem para ONGs e responsáveis por animais disponíveis para adoção na AdoPet.">
+  <meta name="keywords" content="mensagem, contato, adoção, animais, pets, comunicação">
+  <meta name="author" content="Bruno Guimarães">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adopet.com/mensagem">
+  <meta property="og:title" content="Enviar Mensagem - AdoPet">
+  <meta property="og:description" content="Entre em contato com ONGs e responsáveis por animais disponíveis para adoção.">
+  <meta property="og:image" content="./assets/img/Logo-768.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://adopet.com/mensagem">
+  <meta property="twitter:title" content="Enviar Mensagem - AdoPet">
+  <meta property="twitter:description" content="Entre em contato com ONGs e responsáveis por animais disponíveis para adoção.">
+  <meta property="twitter:image" content="./assets/img/Logo-768.png">
+  
+  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <title>Enviar Mensagem - AdoPet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize.css/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/cadastro/cadastro.css">
+  <link rel="stylesheet" href="./assets/css/homer/home.css">
+  <link rel="stylesheet" href="./assets/css/mensagem/mensagem.css">
 </head>
 
 <body>
-	<header class="cabecalho cabecalho--mensagem">
-		<div class="background__top"></div>
-		<ul class="cabecalho__lista">
-			<li class="cabecalho__item cabecalho__logo"><a href="index.html" class="cabecalho__link"><img
-						src="./assets/img/Logo-768.png" alt=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="index.html" class="cabecalho__link"><img src="./assets/img/icon-home.svg"
-						alt="" srcset=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="mensagem.html" class="cabecalho__link"><img src="./assets/img/icon-mail.svg"
-						alt="" srcset=""></a>
-			</li>
-		</ul>
-		<a href="perfil.html" class="cabecalho__link">
-			<div class="perfil__usuario"></div>
-		</a>
-	</header>
-	<div class="background__lateral"></div>
+  <header class="cabecalho cabecalho--mensagem" role="banner">
+    <div class="background__top" aria-hidden="true"></div>
+    
+    <nav class="cabecalho__nav" role="navigation" aria-label="Navegação principal">
+      <ul class="cabecalho__lista">
+        <li class="cabecalho__item cabecalho__logo">
+          <a href="index.html" class="cabecalho__link" aria-label="AdoPet - Página inicial">
+            <img src="./assets/img/Logo-768.png" alt="Logo AdoPet" width="168" height="44">
+          </a>
+        </li>
+        <li class="cabecalho__item">
+          <a href="index.html" class="cabecalho__link" aria-label="Página inicial">
+            <img src="./assets/img/icon-home.svg" alt="Ícone casa" width="24" height="24">
+          </a>
+        </li>
+        <li class="cabecalho__item">
+          <a href="mensagem.html" class="cabecalho__link" aria-label="Mensagens" aria-current="page">
+            <img src="./assets/img/icon-mail.svg" alt="Ícone mensagem" width="24" height="24">
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <a href="perfil.html" class="cabecalho__link" aria-label="Perfil do usuário">
+      <div class="perfil__usuario" role="img" aria-label="Avatar do usuário"></div>
+    </a>
+  </header>
+  
+  <div class="background__lateral" aria-hidden="true"></div>
 
-	<main>
-		<section class="container__mensagem">
-			<p class="home__paragrafo paragrafo__mensagem">Envie uma mensagem para a pessoa ou instituição que está cuidado do
-				animal:</p>
-			<div class="container__formulario">
-				<form action="" class="formulario__mensagem" data-formulario-mensagem>
-					<label for="nome">
-						<legend class="formulario__titulo--mensagem">Nome</legend>
-					</label>
-					<input type="text" id="nome" name="nome" class="input__mensagem" placeholder="Digite seu nome" required>
+  <main role="main">
+    <section class="container__mensagem">
+      <div class="message-intro">
+        <h1 class="home__paragrafo paragrafo__mensagem">
+          Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:
+        </h1>
+      </div>
+      
+      <div class="container__formulario">
+        <form action="" method="post" class="formulario__mensagem" data-formulario-mensagem novalidate>
+          <div class="form-group">
+            <label for="nome" class="formulario__titulo--mensagem">Nome completo</label>
+            <input 
+              type="text" 
+              id="nome" 
+              name="nome" 
+              class="input__mensagem" 
+              placeholder="Digite seu nome completo"
+              required
+              aria-describedby="nome-error"
+              autocomplete="name"
+            >
+            <div id="nome-error" class="error-message" role="alert" aria-live="polite"></div>
+          </div>
 
-					<label for="telefone">
-						<legend class="formulario__titulo--mensagem">Telefone</legend>
-					</label>
-					<input type="number" id="telefone" name="telefone" class="input__mensagem"
-						placeholder="Insira seu telefone e/ou whatsapp" pattern="[0-9]{2}[0-9]{4}[0-9]{5}" required>
-					<label for="animal">
-						<legend class="formulario__titulo--mensagem">Nome do Animal</legend>
-					</label>
-					<input type="text" id="animal" name="animal" class="input__mensagem"
-						placeholder="Por qual animal você se interessou?" required>
-					<label for="mensagem">
-						<legend class="formulario__titulo--mensagem">Mensagem</legend>
-					</label>
-					<textarea name="mensagem" id="mensagem" class="textarea__mensagem" placeholder="Escreva sua Mensagem"
-						required></textarea>
-					<input type="submit" class="sessao__botao sessao__botao--cadastro sessao__botao--mensagem" value="ENVIAR">
+          <div class="form-group">
+            <label for="telefone" class="formulario__titulo--mensagem">Telefone</label>
+            <input 
+              type="tel" 
+              id="telefone" 
+              name="telefone" 
+              class="input__mensagem"
+              placeholder="(11) 99999-9999"
+              pattern="^\(\d{2}\)\s\d{4,5}-\d{4}$"
+              required
+              aria-describedby="telefone-help telefone-error"
+              autocomplete="tel"
+            >
+            <div id="telefone-help" class="input-help">Formato: (11) 99999-9999</div>
+            <div id="telefone-error" class="error-message" role="alert" aria-live="polite"></div>
+          </div>
 
+          <div class="form-group">
+            <label for="animal" class="formulario__titulo--mensagem">Nome do Animal</label>
+            <input 
+              type="text" 
+              id="animal" 
+              name="animal" 
+              class="input__mensagem"
+              placeholder="Por qual animal você se interessou?"
+              required
+              aria-describedby="animal-error"
+            >
+            <div id="animal-error" class="error-message" role="alert" aria-live="polite"></div>
+          </div>
 
-				</form>
-			</div>
-		</section>
+          <div class="form-group">
+            <label for="mensagem" class="formulario__titulo--mensagem">Mensagem</label>
+            <textarea 
+              name="mensagem" 
+              id="mensagem" 
+              class="textarea__mensagem" 
+              placeholder="Conte sobre você, sua experiência com animais e por que deseja adotar este pet"
+              required
+              aria-describedby="mensagem-help mensagem-error"
+              maxlength="1000"
+            ></textarea>
+            <div id="mensagem-help" class="input-help">Máximo 1000 caracteres. <span id="char-count">0/1000</span></div>
+            <div id="mensagem-error" class="error-message" role="alert" aria-live="polite"></div>
+          </div>
 
-	</main>
+          <button type="submit" class="sessao__botao sessao__botao--cadastro sessao__botao--mensagem">
+            ENVIAR MENSAGEM
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-	<footer class="footer--cadastro">
-		<p class="footer__paragrago">2022 - Desenvolvido por Alura.</p>
-	</footer>
-	<script src="./assets/js/mensagem.js" type="module"></script>
+  <footer class="footer--cadastro" role="contentinfo">
+    <p class="footer__paragrafo">
+      © 2024 - Desenvolvido por 
+      <a class="footer__link" href="https://github.com/devguimaraes" target="_blank" rel="noopener noreferrer" aria-label="Perfil do desenvolvedor Bruno Guimarães no GitHub (abre em nova aba)">
+        Bruno Guimarães
+      </a>
+    </p>
+  </footer>
+
+  <script src="./assets/js/mensagem.js" type="module"></script>
 </body>
 
 </html>

@@ -2,81 +2,123 @@
 <html lang="pt-br">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Adot-Pet</title>
-	<link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
-	<!-- CSS -->
-	<link rel="stylesheet" href="./assets/css/reset.css">
-	<link rel="stylesheet" href="./assets/css/index.css">
-	<link rel="stylesheet" href="./assets/css/cadastro/cadastro.css">
-	<link rel="stylesheet" href="./assets/css/login/login.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Faça login na AdoPet e encontre seu novo melhor amigo para adoção.">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <title>Login - AdoPet</title>
+  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize.css/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/cadastro/cadastro.css">
+  <link rel="stylesheet" href="./assets/css/login/login.css">
 </head>
 
 <body>
-	<header class="cabecalho cabecalho--cadastro">
-		<div class="background__top"></div>
+  <header class="cabecalho cabecalho--cadastro" role="banner">
+    <div class="background__top" aria-hidden="true"></div>
 
-		<ul class="cabecalho__lista">
-			<li class="cabecalho__item cabecalho__logo"><a href="index.html" class="cabecalho__link"><img
-						src="./assets/img/Logo-768.png" alt=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="index.html" class="cabecalho__link"><img src="./assets/img/icon-home.svg"
-						alt="" srcset=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="mensagem.html" class="cabecalho__link"><img src="./assets/img/icon-mail.svg"
-						alt="" srcset=""></a>
-			</li>
-		</ul>
+    <nav class="cabecalho__nav" role="navigation" aria-label="Navegação principal">
+      <ul class="cabecalho__lista">
+        <li class="cabecalho__item cabecalho__logo">
+          <a href="index.html" class="cabecalho__link" aria-label="AdoPet - Página inicial">
+            <img src="./assets/img/Logo-768.png" alt="Logo AdoPet" width="168" height="44">
+          </a>
+        </li>
+        <li class="cabecalho__item">
+          <a href="index.html" class="cabecalho__link" aria-label="Página inicial">
+            <img src="./assets/img/icon-home.svg" alt="Ícone casa" width="24" height="24">
+          </a>
+        </li>
+        <li class="cabecalho__item">
+          <a href="mensagem.html" class="cabecalho__link" aria-label="Mensagens">
+            <img src="./assets/img/icon-mail.svg" alt="Ícone mensagem" width="24" height="24">
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-		<div class="background__patas"></div>
-	</header>
+    <div class="background__patas" aria-hidden="true"></div>
+  </header>
 
-	<div class="background__lateral"></div>
+  <div class="background__lateral" aria-hidden="true"></div>
 
-	<main>
-		<section class="sessao-principal--cadastro sessao-principal--login">
-			<div class="container-img">
-				<img src="./assets/img/logo-azul-mobile.svg" alt="logotipo Adotpet">
-			</div>
+  <main role="main">
+    <section class="sessao-principal--cadastro sessao-principal--login">
+      <div class="container-img">
+        <img src="./assets/img/logo-azul-mobile.svg" alt="Logo AdoPet em azul" width="187" height="122">
+      </div>
 
-			<p class="sessao__paragrafo">Já tem conta? Faça seu login:</p>
+      <h1 class="sessao__titulo visually-hidden">Login</h1>
+      <p class="sessao__paragrafo">Já tem conta? Faça seu login:</p>
 
-			<div class="sessao-principal__formulario">
-				<form action="./home.html" class="formulario__cadastro" id="form-login">
-					<label for="email">
-						<legend class="formulario__titulo">Email</legend>
-					</label>
-					<input type="email" id='email' class="formulario__input" data-tipo placeholder="Por favor digite seu e-mail"
-						pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"
-						required>
-					<span class="error" data-error></span>
+      <div class="sessao-principal__formulario">
+        <form action="./home.html" class="formulario__cadastro" id="form-login" novalidate>
+          <div class="formulario__campo">
+            <label for="email" class="formulario__titulo">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email"
+              class="formulario__input" 
+              data-tipo="email"
+              placeholder="Digite seu e-mail"
+              autocomplete="email"
+              required
+              aria-describedby="email-error"
+            >
+            <span class="error" id="email-error" data-error aria-live="polite"></span>
+          </div>
 
-					<label for="senha">
-						<legend class="formulario__titulo">Senha</legend>
-					</label>
-					<input type="password" id='senha' class="formulario__input formulario__input--senha"
-						placeholder="Por favor digite sua senha" data-tipo required>
-					<br>
-					<span class="error" data-error></span>
-					<a href="#" class="esqueci-senha">Esqueci minha senha.</a>
+          <div class="formulario__campo">
+            <label for="senha" class="formulario__titulo">Senha</label>
+            <input 
+              type="password" 
+              id="senha" 
+              name="password"
+              class="formulario__input formulario__input--senha"
+              placeholder="Digite sua senha" 
+              data-tipo="senha"
+              autocomplete="current-password"
+              required
+              aria-describedby="senha-error"
+            >
+            <span class="error" id="senha-error" data-error aria-live="polite"></span>
+            <a href="#" class="esqueci-senha" aria-label="Recuperar senha esquecida">Esqueci minha senha.</a>
+          </div>
 
-					<!-- BOTAO -->
-					<input type="submit" class="sessao__botao sessao__botao--cadastro" id="btnEnviar" value="ENTRAR">
-				</form>
+          <button type="submit" class="sessao__botao sessao__botao--cadastro" id="btnEnviar">
+            Entrar
+          </button>
+        </form>
 
-			</div>
-		</section>
+        <p class="login__cadastro">
+          Não tem conta? 
+          <a href="cadastro.html" class="login__link" aria-label="Criar nova conta">Cadastre-se aqui</a>
+        </p>
+      </div>
+    </section>
 
-		<div class="background__lateral--branco"></div>
-	</main>
+    <div class="background__lateral--branco" aria-hidden="true"></div>
+  </main>
 
+  <footer class="footer--cadastro" role="contentinfo">
+    <p class="footer__paragrafo">
+      © 2024 - Desenvolvido por 
+      <a class="footer__link" href="https://github.com/devguimaraes" target="_blank" rel="noopener noreferrer" aria-label="Perfil do desenvolvedor Bruno Guimarães no GitHub (abre em nova aba)">
+        Bruno Guimarães
+      </a>
+    </p>
+  </footer>
 
-	<footer class="footer--cadastro">
-		<p class="footer__paragrago">2022 - Desenvolvido por Alura.</p>
-	</footer>
-	<script src="./assets/js/login.js" type="module"></script>
+  <!-- Scripts otimizados -->
+  <script type="module" src="./assets/js/performance.js"></script>
+  <script type="module" src="./assets/js/login.js"></script>
 </body>
 
 </html>
