@@ -1,10 +1,29 @@
 {
+  "name": "adopet",
+  "version": "1.0.0",
+  "description": "AdoPet - Plataforma de intermediação entre adotantes de animais e ONGs",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=/index.html",
+    "lint": "eslint assets/js/**/*.js",
+    "lint:fix": "eslint assets/js/**/*.js --fix",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\"",
+    "dev": "npx live-server --port=3000 --open=/index.html --watch=assets"
+  },
+  "keywords": ["adopet", "adoção", "pets", "animais", "ong"],
+  "author": "Bruno Guimarães <devguimaraes@email.com>",
+  "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.20.0",
+    "eslint": "^9.15.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
