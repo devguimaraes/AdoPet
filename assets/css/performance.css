@@ -1,0 +1,327 @@
+/**
+ * Arquivo de otimizações de performance CSS
+ * Contém regras específicas para melhorar o carregamento e renderização
+ */
+
+/* Critical CSS - Above the fold */
+.critical {
+  /* Estilos críticos que devem ser carregados primeiro */
+  contain: layout style paint;
+}
+
+/* Lazy loading e performance de imagens */
+.img-lazy {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  will-change: opacity;
+}
+
+.img-lazy.loaded {
+  opacity: 1;
+  will-change: auto;
+}
+
+/* Otimização de fontes */
+@font-face {
+  font-family: 'Poppins-Fallback';
+  src: local('Arial'), local('Helvetica'), local('sans-serif');
+  font-display: swap;
+  size-adjust: 107%;
+  ascent-override: 105%;
+  descent-override: 35%;
+  line-gap-override: 10%;
+}
+
+@font-face {
+  font-family: 'IBM-Plex-Sans-Fallback';
+  src: local('Arial'), local('Helvetica'), local('sans-serif');
+  font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 100%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+/* Contenção de layout para evitar reflows */
+.layout-contain {
+  contain: layout;
+}
+
+.style-contain {
+  contain: style;
+}
+
+.paint-contain {
+  contain: paint;
+}
+
+.size-contain {
+  contain: size;
+}
+
+.strict-contain {
+  contain: strict;
+}
+
+/* Otimizações de GPU */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.gpu-accelerated:hover {
+  will-change: auto;
+}
+
+/* Preload de recursos críticos */
+.preload-critical {
+  content-visibility: auto;
+  contain-intrinsic-size: 200px;
+}
+
+/* Otimização de animações */
+.animate-optimized {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-optimized:not(:hover):not(:focus):not(:active) {
+  will-change: auto;
+}
+
+/* Redução de repaint */
+.no-repaint {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Otimização de scroll */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Contenção de estilo para componentes isolados */
+.component-isolated {
+  contain: style layout paint;
+}
+
+/* Otimização de flexbox */
+.flex-optimized {
+  display: flex;
+  contain: layout style;
+}
+
+/* Otimização de grid */
+.grid-optimized {
+  display: grid;
+  contain: layout style;
+}
+
+/* Prevenção de layout shift */
+.prevent-cls {
+  aspect-ratio: attr(width) / attr(height);
+  width: 100%;
+  height: auto;
+}
+
+/* Otimização de texto */
+.text-optimized {
+  text-rendering: optimizeSpeed;
+  font-kerning: none;
+  font-variant-ligatures: none;
+}
+
+.text-quality {
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+}
+
+/* Lazy loading de seções */
+.section-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: 500px;
+}
+
+/* Otimização de sombras */
+.shadow-optimized {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Otimização de bordas */
+.border-optimized {
+  outline: 1px solid transparent;
+  border: 1px solid currentColor;
+}
+
+/* Prevenção de FOUC (Flash of Unstyled Content) */
+.no-fouc {
+  visibility: hidden;
+}
+
+.no-fouc.loaded {
+  visibility: visible;
+}
+
+/* Otimização de transições */
+.transition-optimized {
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Contenção para modais e overlays */
+.modal-contain {
+  contain: layout style paint;
+  isolation: isolate;
+}
+
+/* Otimização de z-index */
+.z-context {
+  isolation: isolate;
+}
+
+/* Performance para listas longas */
+.list-optimized {
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+.list-item-optimized {
+  contain: layout style;
+  contain-intrinsic-size: 60px;
+}
+
+/* Otimização de formulários */
+.form-optimized {
+  contain: layout style;
+}
+
+.input-optimized {
+  contain: layout style;
+  will-change: border-color, box-shadow;
+}
+
+.input-optimized:not(:focus) {
+  will-change: auto;
+}
+
+/* Otimização de navegação */
+.nav-optimized {
+  contain: layout style paint;
+}
+
+/* Preload de imagens críticas */
+.img-critical {
+  loading: eager;
+  decoding: sync;
+}
+
+.img-lazy-load {
+  loading: lazy;
+  decoding: async;
+}
+
+/* Otimização de vídeos */
+.video-optimized {
+  contain: layout style paint;
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 200px;
+}
+
+/* Redução de complexidade de seletores */
+.simple-selector {
+  /* Evitar seletores complexos para melhor performance */
+}
+
+/* Otimização de pseudo-elementos */
+.pseudo-optimized::before,
+.pseudo-optimized::after {
+  contain: layout style paint;
+}
+
+/* Performance para dispositivos de baixa potência */
+@media (prefers-reduced-motion: reduce) {
+  .animate-optimized,
+  .transition-optimized {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Otimização para conexões lentas */
+@media (prefers-reduced-data: reduce) {
+  .img-lazy {
+    display: none;
+  }
+  
+  .video-optimized {
+    display: none;
+  }
+  
+  .shadow-optimized {
+    filter: none;
+    box-shadow: none;
+  }
+}
+
+/* Otimização para telas de alta densidade */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .img-hidpi {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Contenção para componentes específicos */
+.header-contain {
+  contain: layout style paint;
+}
+
+.footer-contain {
+  contain: layout style paint;
+}
+
+.sidebar-contain {
+  contain: layout style paint;
+}
+
+.main-contain {
+  contain: layout style;
+}
+
+/* Otimização de cores */
+.color-optimized {
+  color-scheme: light dark;
+}
+
+/* Prevenção de layout thrashing */
+.no-layout-thrash {
+  transform: translateZ(0);
+  contain: layout;
+}
+
+/* Otimização de overflow */
+.overflow-optimized {
+  overflow: hidden;
+  contain: paint;
+}
+
+/* Performance de hover states */
+.hover-optimized:hover {
+  will-change: transform, opacity, background-color;
+}
+
+.hover-optimized:not(:hover) {
+  will-change: auto;
+}
+
+/* Otimização de focus states */
+.focus-optimized:focus {
+  will-change: border-color, box-shadow, outline;
+}
+
+.focus-optimized:not(:focus) {
+  will-change: auto;
+}
