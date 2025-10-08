@@ -1,0 +1,325 @@
+/* Arquivo de responsividade global para AdoPet */
+
+/* Container responsivo */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Grid responsivo */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr;
+}
+
+.grid--3-cols {
+  grid-template-columns: 1fr;
+}
+
+.grid--4-cols {
+  grid-template-columns: 1fr;
+}
+
+/* Flexbox utilitários */
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  justify-content: space-between;
+}
+
+.flex--around {
+  justify-content: space-around;
+}
+
+/* Utilitários de visibilidade */
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Utilitários de espaçamento responsivo */
+.mt-auto { margin-top: auto; }
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
+
+.p-0 { padding: 0; }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+
+.m-0 { margin: 0; }
+.m-sm { margin: var(--spacing-sm); }
+.m-md { margin: var(--spacing-md); }
+.m-lg { margin: var(--spacing-lg); }
+
+/* Breakpoints específicos */
+
+/* Mobile pequeno (320px - 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .hidden-mobile {
+    display: none !important;
+  }
+  
+  .visible-mobile {
+    display: block !important;
+  }
+  
+  .text-center-mobile {
+    text-align: center;
+  }
+  
+  .full-width-mobile {
+    width: 100%;
+  }
+}
+
+/* Mobile médio (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+  
+  .hidden-mobile-md {
+    display: none !important;
+  }
+  
+  .visible-mobile-md {
+    display: block !important;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hidden-tablet {
+    display: none !important;
+  }
+  
+  .visible-tablet {
+    display: block !important;
+  }
+  
+  .flex--tablet-row {
+    flex-direction: row;
+  }
+  
+  .flex--tablet-column {
+    flex-direction: column;
+  }
+}
+
+/* Desktop pequeno (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hidden-desktop-sm {
+    display: none !important;
+  }
+  
+  .visible-desktop-sm {
+    display: block !important;
+  }
+}
+
+/* Desktop médio e grande (1440px+) */
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+  
+  .grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .hidden-desktop {
+    display: none !important;
+  }
+  
+  .visible-desktop {
+    display: block !important;
+  }
+}
+
+/* Orientação paisagem em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hidden-landscape {
+    display: none !important;
+  }
+  
+  .visible-landscape {
+    display: block !important;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* Utilitários para impressão */
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+  
+  .visible-print {
+    display: block !important;
+  }
+  
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  .container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Preferências de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .no-animation {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .high-contrast {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Utilitários de texto responsivo */
+.text-responsive {
+  font-size: clamp(var(--font-size-sm), 2.5vw, var(--font-size-lg));
+}
+
+.heading-responsive {
+  font-size: clamp(var(--font-size-lg), 4vw, var(--font-size-4xl));
+}
+
+/* Imagens responsivas */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Aspect ratio utilitários */
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+}
+
+.aspect-ratio::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.aspect-ratio--square::before {
+  padding-top: 100%; /* 1:1 */
+}
+
+.aspect-ratio--4-3::before {
+  padding-top: 75%; /* 4:3 */
+}
+
+.aspect-ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -4,21 +4,23 @@
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 24px;
-
 	color: var(--coral);
+	text-decoration: none;
+	transition: all var(--transition-normal);
+	margin-top: var(--spacing-sm);
+}
+
+.esqueci-senha:hover,
+.esqueci-senha:focus {
+	color: var(--background-azul);
+	text-decoration: underline;
 }
 
 .sessao-principal--login {
 	margin-bottom: 15rem;
+	max-width: 500px;
+	padding: 0 var(--spacing-md);
 }
-
-@media (min-height: 1300px) {
-	.sessao-principal--login {
-		margin-bottom: 29rem;
-	}
-
-}
-
 
 .error {
 	display: none;
@@ -29,6 +31,93 @@
 	padding: 0.5rem;
 	border-radius: 5px;
 	display: block;
-	background-color: brown;
+	background-color: var(--error);
 	color: var(--branco);
+	font-size: var(--font-size-sm);
+	border-left: 4px solid var(--coral);
+}
+
+/* Mobile pequeno (320px - 480px) */
+@media (max-width: 480px) {
+	.sessao-principal--login {
+		margin-bottom: 8rem;
+		padding: 0 var(--spacing-sm);
+	}
+
+	.esqueci-senha {
+		font-size: 11px;
+		margin-top: var(--spacing-xs);
+	}
+
+	.error--active {
+		padding: var(--spacing-sm);
+		font-size: var(--font-size-xs);
+	}
+}
+
+/* Mobile médio (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+	.sessao-principal--login {
+		margin-bottom: 10rem;
+		max-width: 400px;
+	}
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.sessao-principal--login {
+		margin-bottom: 12rem;
+		max-width: 450px;
+	}
+
+	.esqueci-senha {
+		font-size: 13px;
+	}
+}
+
+/* Desktop pequeno (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+	.sessao-principal--login {
+		margin-bottom: 15rem;
+		max-width: 500px;
+	}
+
+	.esqueci-senha {
+		font-size: var(--font-size-sm);
+	}
+}
+
+/* Desktop médio e grande (1440px+) */
+@media (min-width: 1440px) {
+	.sessao-principal--login {
+		margin-bottom: 18rem;
+		max-width: 550px;
+	}
+
+	.esqueci-senha {
+		font-size: var(--font-size-base);
+	}
+}
+
+/* Orientação paisagem em dispositivos móveis */
+@media (max-height: 600px) and (orientation: landscape) {
+	.sessao-principal--login {
+		margin-bottom: 5rem;
+	}
+
+	.esqueci-senha {
+		margin-top: var(--spacing-xs);
+	}
+
+	.error--active {
+		padding: var(--spacing-xs);
+		margin-top: var(--spacing-sm);
+	}
+}
+
+/* Altura específica para telas muito altas */
+@media (min-height: 1300px) {
+	.sessao-principal--login {
+		margin-bottom: 25rem;
+	}
 }
